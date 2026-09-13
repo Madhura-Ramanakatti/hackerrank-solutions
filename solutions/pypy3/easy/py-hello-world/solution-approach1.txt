@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-09-13, 08:34 p.m.
+# Technique   standard-output-print
+# Time        O(1)
+# Space       O(1)
+# Insight     The program initializes a string variable and outputs its contents to the standard output stream.
+# Interview   Before: "How do I display text in Python?" After: "You use the print function, which operates in O(1) time and space, to output the required string to stdout."
+# Pitfalls    (1) Incorrect punctuation or capitalization in the string literal will cause a mismatch with the required output.  (2) Failure to include the print function will result in no output being sent to stdout.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
