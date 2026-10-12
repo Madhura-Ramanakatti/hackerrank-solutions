@@ -7,6 +7,10 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-10-12, 08:58 a.m.
+# Technique   try-except-block-handling
+# Time        O(T)
+# Space       O(1)
+# Pitfalls    (1) Failing to use integer division operator // as specified in the Python 3 note.  (2) Incorrectly catching generic Exception instead of specific ZeroDivisionError and ValueError types.  (3) Omitting the 'Error Code:' prefix required by the output format.
 # ──────────────────────────────────────────────────
 
 
