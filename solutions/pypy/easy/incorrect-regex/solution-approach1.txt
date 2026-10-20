@@ -7,6 +7,12 @@
 # Language    pypy
 # Status      Accepted
 # Submitted   2026-10-20, 09:48 p.m.
+# Technique   regex-compilation-exception-handling
+# Time        O(T * N)
+# Space       O(N)
+# Insight     The implementation leverages the built-in regex engine's compilation process to validate patterns by catching exceptions raised during the parsing of malformed regular expressions.
+# Interview   Before: I would manually parse the string to check for balanced brackets or invalid quantifiers. After: I can simply attempt to compile the pattern using re.compile and catch the re.error exception, which runs in O(T * N) time where N is the pattern length.
+# Pitfalls    (1) Failing to handle the re.error exception will cause the program to crash on invalid regex patterns.  (2) Assuming all regex syntax errors are caught by a single generic exception rather than the specific re.error class.
 # ──────────────────────────────────────────────────
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
