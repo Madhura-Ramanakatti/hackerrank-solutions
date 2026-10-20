@@ -1,0 +1,26 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/incorrect-regex/problem?isFullScreen=true
+# Problem     Incorrect Regex
+# Difficulty  Easy
+# Subdomain   Errors and Exceptions
+# Platform    HackerRank
+# Language    pypy
+# Status      Accepted
+# Submitted   2026-10-20, 09:48 p.m.
+# ──────────────────────────────────────────────────
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+
+import re 
+
+T = int(raw_input())
+
+for _ in range(T):
+    pattern = raw_input()
+    try:
+        re.compile(pattern)
+        print "True"
+    except:
+        print "False"
+        
