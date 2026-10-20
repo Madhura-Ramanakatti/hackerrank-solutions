@@ -1,0 +1,25 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/word-order/problem?isFullScreen=true
+# Problem     Word Order
+# Difficulty  Medium
+# Subdomain   Collections
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-10-20, 09:54 p.m.
+# ──────────────────────────────────────────────────
+
+from collections import OrderedDict
+
+n = int(input())
+words = OrderedDict()
+
+
+for _ in range(n):
+    word = input()
+    words[word] = words.get(word, 0) + 1
+    
+    
+print(len(words))
+print(*words.values())
+
