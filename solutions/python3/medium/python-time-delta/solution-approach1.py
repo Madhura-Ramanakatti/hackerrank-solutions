@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-11-23, 07:43 a.m.
+# Technique   datetime-strptime-parsing
+# Time        O(1)
+# Space       O(1)
+# Insight     The solution leverages the datetime module to parse timestamps into timezone-aware objects, allowing for direct subtraction and conversion to total seconds.
+# Interview   Before: "I would manually parse the string and calculate the offset difference." After: "Using datetime.strptime with the %z directive handles timezone offsets automatically, resulting in an O(1) time complexity per pair of timestamps regardless of the date values."
+# Pitfalls    (1) Failing to include the %z directive in the format string will cause strptime to ignore the timezone offset.  (2) Assuming the input format is fixed without accounting for the specific day-of-week and month abbreviations required by the %a and %b directives.
 # ──────────────────────────────────────────────────
 
 #!/bin/python3
